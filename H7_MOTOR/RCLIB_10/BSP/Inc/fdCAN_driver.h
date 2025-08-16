@@ -1,14 +1,9 @@
-/**
- * @file fdCAN_driver.h
- * @author XieFField(WJ)
- * @brief fdCAN驱动文件
- */
-
 #ifndef FDCAN_DRIVER
 #define FDCAN_DRIVER
 
         #pragma once
 #include <cstdint>
+#include "tool.h"
 
 #ifdef __cplusplus
 extern "C" 
@@ -21,7 +16,7 @@ extern "C"
 #endif
 
 #define BUS_MAX_COUNT 3 // 最大CAN总线数量
-#define MAX_CAN_DEVICE 12 // 每个CAN总线最大设备数量
+#define MAX_CAN_DEVICE 12 // 每个CAN总线最大设备数量,12这个数是我随便取的
 
 #ifdef __cplusplus
 
@@ -35,7 +30,10 @@ enum CAN_FrameType{
 //god knows
 class CAN_Driver{
 public:
-    CAN_Driver(FDCAN_HandleTypeDef *hfdcan, CAN_FrameType CAN_Type, uint32_t CAN_ID);
+    CAN_Driver(FDCAN_HandleTypeDef *hfdcan, CAN_FrameType CAN_Type, uint32_t CAN_ID)
+    {
+        AUTO_RegisterCANDriver();
+    }
 
     uint32_t CAN_ID_;
     CAN_FrameType CAN_Type_;
@@ -67,7 +65,7 @@ private:
 
     void AUTO_RegisterCANDriver(); //被构造函数调用后自动注册CAN实例
 
-    static int CAN_RegisterDriver(CAN_Driver *driver);
+    static int CAN_RegisterDriver(FDCAN_HandleTypeDef *driver);
 
     static void CAN1_ID_Repeated(void);
     static void CAN2_ID_Repeated(void);
