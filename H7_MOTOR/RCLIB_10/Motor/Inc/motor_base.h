@@ -38,27 +38,66 @@ typedef enum DJI_MOTOR_FLAG
 /**
  * @brief 电机基类，包含电机的所有通用函数
  *        所有电机类都应当继承此类，保证接口统一
+ *        原本是可以延顺杨哥的框架，但他那套不是很能兼容GO电机
+ *        主要是因为电机基类的关系,所以魔改了
+ *
+ *        此基类中计算角度和距离的成员函数并非普遍适用，具体实现需根据电机类型进行重写
  */
 class Motor_Base{
+private:
+    int round_cnt = 0;
+    virtual int16_t encoder_max() const { return 8192; }
+    virtual float encoder_angle_ratio() const { return 8192.0f / 360.0f; }
+
+    
+protected:
+    uint16_t encoder = 0;
+    float angle = 0, encoder_last = 0;
+    bool encoder_is_init = false;
+    float encoder_offset = 0;
 public:
     Motor_Base();
     //速度
     virtual float get_speed() = 0; 
-    virtual void  set_speed(float target_speed);
+    virtual void  set_speed(float target_speed) = 0;
 
-    virtual void  send_speed(float target_speed) {};
+    virtual void  send_speed(float target_speed) = 0;
 
     //位置
-    virtual float get_pos(){};
-    virtual float get_distance(){};
-    virtual void  set_pos(float target_pos){};
-    virtual void  set_distance(float target_distance){};
+    virtual float get_pos(uint8_t can_Rx_Data[8])
+    {
+        uint16_t virtual_angle = (uint16_t)(can_Rx_Data[0] << 8 | can_Rx_Data[1]);
+        return virtual_angle / encoder_angle_ratio();
+    }
 
-    virtual void set_current(float target_current){};//设置电流
+    virtual float get_distance(uint8_t can_Rx_Data[8])
+    {
+        encoder = (uint16_t)(can_Rx_Data[0] << 8 | can_Rx_Data[1]);
+        if(encoder_is_init)
+        {
+            if(this->encoder - this->encoder_last < encoder_max() / -2)
+                this->round_cnt++;
+            else if(this->encoder - this->encoder_last > encoder_max() / 2)
+                this->round_cnt--;
+        }
+        else
+        {
+            encoder_offset = encoder;
+            encoder_is_init = true;
+        }
+        this->encoder_last = this->encoder;
+        int32_t total_encoder = round_cnt * 8192 + encoder - encoder_offset;
+        return total_encoder / encoder_angle_ratio() / get_reduction_ratio();
+    }
+
+    virtual void set_pos(float target_pos) = 0;
+    virtual void set_distance(float target_distance) = 0;
+
+    virtual void set_current(float target_current) = 0;     //设置电流
 
     //校准
-    virtual void relocate_distance(float distance) {};   // 重新定位距离
-    virtual void relocate_pos(float angle) {}; // 重新定位角度
+    virtual void relocate_distance(float distance) {};      // 重新定位距离
+    virtual void relocate_pos(float angle) {};              // 重新定位角度
 
     //获取目标值
     virtual float get_target_speed(){};
@@ -76,6 +115,9 @@ public:
 
     //电机分类
     MOTOR_FLAG MOTOR_TYPE = NONE_MOTOR;
+
+    //减速比
+    virtual float get_reduction_ratio() const{return 1.0f;};
 };
 
 #define MAX_DJI_INSTANCE 8
@@ -90,23 +132,22 @@ public:
  *        电流都赋值进去，那么下一帧来时会覆盖上一帧的数据，从而导致电机
  *        控制异常，前面CAN驱动使用全局变量也是为这个包的饺子。
  *        
+ *        目前的封装处理会导致GM6020和RM3508不可在同一路CAN上使用
  */
 class DJI_Motor_Base
 {
 public:
-
-    float realAngle = 0.0f;
     float realCurrent = 0.0f;
-    float realRPM = 0.0f;
+
     int16_t target_virtualCurrent = 0;
 
     float max_realCurrent = 0.0f;
-    uint16_t max_virtualAngle = 0.0f;
+
     int16_t max_virtualCurrent = 0;
 
     DJI_MOTOR_FLAG DJI_MOTOR_TYPE = NONE_DJI;
     DJI_Motor_Base(uint32_t can_id, FDCAN_HandleTypeDef *hfdcan, 
-                   float max_RealCurrent_, int16_t max_virtualCurrent_, uint16_t max_virtualAngle_, 
+                   float max_RealCurrent_, int16_t max_virtualCurrent_,
                     DJI_MOTOR_FLAG dji_motor_type_);
 
     //数据帧生成
@@ -118,9 +159,6 @@ public:
     //物理量转换接口
     float get_RealCurrent(int16_t virtual_current);
     float get_VirtualCurrent(float real_current);
-    float get_RealAngle(uint32_t virtual_angle);
-
-    float get_RealDistance();
 
     //各电机实例表
     static DJI_Motor_Base *M3508_Instance_CAN1[MAX_DJI_INSTANCE];
@@ -163,6 +201,9 @@ private:
     void M6020_CAN3ID_ERROR(void);
 
     void NONE_TYPE_ERROR(void);
+
+    uint32_t send_idLOW(){return 0x200;}
+    uint32_t send_idHIGH(){return 0x1FF;}
 
 };
 
