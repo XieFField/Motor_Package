@@ -115,6 +115,12 @@ public:
     //电机分类
     MOTOR_FLAG MOTOR_TYPE = NONE_MOTOR;
 
+    //温度
+    virtual uint8_t get_temperature() const { return 0; } 
+
+    //力矩
+    virtual float get_torque() const{ return 0.0f;} 
+
     //减速比
     virtual float get_reduction_ratio() const{return 1.0f;};
 };
@@ -131,7 +137,7 @@ public:
  *        电流都赋值进去，那么下一帧来时会覆盖上一帧的数据，从而导致电机
  *        控制异常，前面CAN驱动使用全局变量也是为这个包的饺子。
  *        
- *        目前的封装处理会导致GM6020和RM3508不可在同一路CAN上使用
+ *        注： M6020不可以和M2006、3508处于同一路CAN总线上。
  */
 class DJI_Motor_Base
 {
