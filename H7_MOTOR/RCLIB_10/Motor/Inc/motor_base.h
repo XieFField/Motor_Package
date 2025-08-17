@@ -29,8 +29,7 @@ typedef enum MOTOR_FLAG
 
 typedef enum DJI_MOTOR_FLAG
 {
-    M2006,
-    M3508,
+    M3508_2006,
     M6020,
     NONE_DJI,
 }DJI_MOTOR_FLAG;
@@ -158,29 +157,22 @@ public:
 
     //物理量转换接口
     float get_RealCurrent(int16_t virtual_current);
-    float get_VirtualCurrent(float real_current);
+    int16_t get_VirtualCurrent(float real_current);
 
     //各电机实例表
-    static DJI_Motor_Base *M3508_Instance_CAN1[MAX_DJI_INSTANCE];
-    static DJI_Motor_Base *M3508_Instance_CAN2[MAX_DJI_INSTANCE];
-    static DJI_Motor_Base *M3508_Instance_CAN3[MAX_DJI_INSTANCE];
-
-    static DJI_Motor_Base *M2006_Instance_CAN1[MAX_DJI_INSTANCE];
-    static DJI_Motor_Base *M2006_Instance_CAN2[MAX_DJI_INSTANCE];
-    static DJI_Motor_Base *M2006_Instance_CAN3[MAX_DJI_INSTANCE];
+    static DJI_Motor_Base *M3508_2006_Instance_CAN1[MAX_DJI_INSTANCE];
+    static DJI_Motor_Base *M3508_2006_Instance_CAN2[MAX_DJI_INSTANCE];
+    static DJI_Motor_Base *M3508_2006_Instance_CAN3[MAX_DJI_INSTANCE];
 
     static DJI_Motor_Base *M6020_Instance_CAN1[MAX_DJI_INSTANCE];
     static DJI_Motor_Base *M6020_Instance_CAN2[MAX_DJI_INSTANCE];
     static DJI_Motor_Base *M6020_Instance_CAN3[MAX_DJI_INSTANCE];
 
     //各电机CAN总线
-    static uint8_t M3508_InstanceCout_CAN1;
-    static uint8_t M3508_InstanceCout_CAN2;
-    static uint8_t M3508_InstanceCout_CAN3;
+    static uint8_t M3508_2006_InstanceCout_CAN1;
+    static uint8_t M3508_2006_InstanceCout_CAN2;
+    static uint8_t M3508_2006_InstanceCout_CAN3;
 
-    static uint8_t M2006_InstanceCout_CAN1;
-    static uint8_t M2006_InstanceCout_CAN2;
-    static uint8_t M2006_InstanceCout_CAN3;
 
     static uint8_t M6020_InstanceCout_CAN1;
     static uint8_t M6020_InstanceCout_CAN2;
@@ -188,13 +180,10 @@ public:
 
 private:
     //报错函数
-    void M3508_CAN1ID_ERROR(void);
-    void M3508_CAN2ID_ERROR(void);
-    void M3508_CAN3ID_ERROR(void);
+    void M3508_2006_CAN1ID_ERROR(void);
+    void M3508_2006_CAN2ID_ERROR(void);
+    void M3508_2006_CAN3ID_ERROR(void);
 
-    void M2006_CAN1ID_ERROR(void);
-    void M2006_CAN2ID_ERROR(void);
-    void M2006_CAN3ID_ERROR(void);
 
     void M6020_CAN1ID_ERROR(void);
     void M6020_CAN2ID_ERROR(void);
