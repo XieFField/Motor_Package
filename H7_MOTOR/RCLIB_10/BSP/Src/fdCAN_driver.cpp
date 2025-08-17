@@ -7,6 +7,8 @@
  *        采用cpp架构可以更有效解决，直接将所用设备实例化，
  *        可以简单粗暴地解决RM电机CAN帧被吞的问题,也不需要
  *        让全局变量在各个文件中漫天飞，相对优雅。
+ * 
+ *        此框架思路借鉴了jerry哥的代码。
  */
 
 #include "fdCAN_driver.h"
@@ -25,18 +27,21 @@ void CAN_Driver::CAN1_ID_Repeated(void)
 {
     // 处理CAN1的ID重复问题
     while(1){}
+    /*ERROR*/
 }
 
 void CAN_Driver::CAN2_ID_Repeated(void)
 {
     // 处理CAN2的ID重复问题
     while(1){}
+    /*ERROR*/
 }
 
 void CAN_Driver::CAN3_ID_Repeated(void)
 {
     // 处理CAN3的ID重复问题
     while(1){}
+    /*ERROR*/
 }
 
 int CAN_Driver::CAN_RegisterDriver(FDCAN_HandleTypeDef *driver)

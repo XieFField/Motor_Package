@@ -67,7 +67,7 @@ private:
 
     static int CAN_RegisterDriver(FDCAN_HandleTypeDef *driver);
 
-    static void CAN1_ID_Repeated(void);
+    static void CAN1_ID_Repeated(void); //±¨´íº¯Êý
     static void CAN2_ID_Repeated(void);
     static void CAN3_ID_Repeated(void);
 };
