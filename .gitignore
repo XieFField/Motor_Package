@@ -6,3 +6,6 @@
 *.dep
 *.o
 *.d
+*.o
+H7_MOTOR/MDK-ARM/H7_MOTOR/cmsis_os2.o
+H7_MOTOR/MDK-ARM/H7_MOTOR/cmsis_os2.o
