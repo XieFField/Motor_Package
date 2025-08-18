@@ -1,5 +1,5 @@
-#ifndef GO1_M8010_H
-#define GO1_M8010_H
+#ifndef GM6020_H
+#define GM6020_H
 
 #pragma once
 
@@ -19,13 +19,12 @@ extern "C" {
 
 #ifdef __cplusplus
 
-class GO1_M8010 : public Motor_Base, public CAN_Driver
+class GM6020 : public Motor_Base, public CAN_Driver
 {
 public:
-    GO1_M8010();
+    GM6020();
     void CAN_update(uint8_t RX_Data[8]) {}; //∂‘EXT≤ª  ”√
 
-    void CAN_update_EXT(uint32_t can_id, uint8_t RX_Data[8]);
 private:
 
 }
@@ -33,4 +32,4 @@ private:
 #endif
 
 
-#endif //GO1_M8010_H
+#endif //GM6020_H

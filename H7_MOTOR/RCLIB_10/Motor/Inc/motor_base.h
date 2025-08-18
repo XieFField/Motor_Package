@@ -34,6 +34,20 @@ typedef enum DJI_MOTOR_FLAG
     NONE_DJI,
 }DJI_MOTOR_FLAG;
 
+//限幅函数
+template <typename T>
+void motor_constraint(T *val, T min, T max)
+{
+    if (*val > max)
+    {
+        *val = max;
+    }
+    else if (*val < min)
+    {
+        *val = min;
+    }
+}
+
 /**
  * @brief 电机基类，包含电机的所有通用函数
  *        所有电机类都应当继承此类，保证接口统一
@@ -55,12 +69,10 @@ protected:
     bool encoder_is_init = false;
     float encoder_offset = 0;
 public:
-    Motor_Base();
-    //速度
-    virtual float get_speed() = 0; 
-    virtual void  set_speed(float target_speed) = 0;
+    Motor_Base(){};
 
-    virtual void  send_speed(float target_speed) = 0;
+    float Out = 0.0f; //输出
+
 
     //位置
     virtual float get_pos(uint8_t can_Rx_Data[8])
@@ -86,31 +98,15 @@ public:
         }
         this->encoder_last = this->encoder;
         int32_t total_encoder = round_cnt * 8192 + encoder - encoder_offset;
-        return total_encoder / encoder_angle_ratio() / get_reduction_ratio();
+        return total_encoder / encoder_angle_ratio() / get_description();
     }
 
-    virtual void set_pos(float target_pos) = 0;
-    virtual void set_distance(float target_distance) = 0;
-
-    virtual void set_current(float target_current) = 0;     //设置电流
+    //速度
+    virtual float get_speed() = 0;
 
     //校准
     virtual void relocate_distance(float distance) {};      // 重新定位距离
     virtual void relocate_pos(float angle) {};              // 重新定位角度
-
-    //获取目标值
-    virtual float get_target_speed(){};
-    virtual float get_target_pos(){};
-    virtual float get_target_distance(){};
-    virtual float get_target_current(){};
-
-    //速度规划
-    virtual bool distance_speedPlan(float target_distance, float max_speed, float max_accel, float max_decel, float final_speed){};
-    virtual bool position_speedPlan(float target_distance, float max_speed, float max_accel, float max_decel, float final_speed){};
-
-    //速度规划重启
-    virtual void distance_speedPlanReStart(){};
-    virtual void position_speedPlanReStart(){};
 
     //电机分类
     MOTOR_FLAG MOTOR_TYPE = NONE_MOTOR;
@@ -119,10 +115,10 @@ public:
     virtual uint8_t get_temperature() const { return 0; } 
 
     //力矩
-    virtual float get_torque() const{ return 0.0f;} 
+    virtual float get_torque() {} 
 
     //减速比
-    virtual float get_reduction_ratio() const{return 1.0f;};
+    virtual float get_description() const{return 1.0f;};
 };
 
 #define MAX_DJI_INSTANCE 8

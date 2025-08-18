@@ -1,5 +1,5 @@
-#ifndef M2006_H
-#define M2006_H
+#ifndef M3508_P_H
+#define M3508_P_H
 
 #pragma once
 
@@ -18,15 +18,20 @@ extern "C" {
 
 #ifdef __cplusplus
 
-#define M2006_DESCRIPTION 36.0f
-#define M2006_MAX_CURRENT 10000.0f // mA
-#define M2006_CURRENT_VIRTUAL 10000
+#define M3508_KT 0.01562f // 3508的内圈转矩常数 单位：N.M/A
+#define M3508_DESCRIPTION 19.2032f  // 3508的减速比
+
+#define M3508_MAX_CURRENT 20000.0f // mA
+#define M3508_CURRENT_VIRTUAL 16384    // 电流映射值
+
+#define M3508_MAXT 0.15622f // 内圈最大转矩
 #define PI 3.14159265f
 
-class M2006 : public Motor_Base , public DJI_Motor_Base, public CAN_Driver
+
+class M3508_P : public Motor_Base , public DJI_Motor_Base, public CAN_Driver
 {
 public:
-    M2006(uint32_t can_id, FDCAN_HandleTypeDef *hfdcan, float motor_description = M2006_DESCRIPTION);
+    M3508_P(uint32_t can_id, FDCAN_HandleTypeDef *hfdcan, float motor_description = M3508_DESCRIPTION);
 
     int16_t motor_process() override;
 
@@ -41,7 +46,8 @@ public:
     float Out = 0.0f; // 输出电流 mA
 
 private:
-    float description = M2006_DESCRIPTION;
+    float description = M3508_DESCRIPTION;
+
     float rpm = 0.0f;
     float angle = 0.0f;
     float distance = 0.0f;
@@ -53,4 +59,4 @@ private:
 #endif
 
 
-#endif //M2006_H
+#endif //M3508_P_H
