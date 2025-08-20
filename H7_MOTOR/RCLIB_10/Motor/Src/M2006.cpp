@@ -17,7 +17,7 @@ void M2006::CAN_Update(uint8_t RX_Data[8])
     distance = get_distance(RX_Data);
     angle = get_pos(RX_Data);
     rpm = (float)(RX_Data[2] << 8 | RX_Data[3]);
-    this->torque = (int16_t)(RX_Data[4] << 8 | RX_Data[5]);
+    this->torque = (float)((int16_t)(RX_Data[4] << 8 | RX_Data[5]));
     temperature = RX_Data[6];
 }
 

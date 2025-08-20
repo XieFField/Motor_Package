@@ -39,6 +39,10 @@
 "h7_motor\port.o"
 "h7_motor\tool.o"
 "h7_motor\fdcan_driver.o"
+"h7_motor\m3508_p.o"
+"h7_motor\motor_base.o"
+"h7_motor\m2006.o"
+"h7_motor\gm6020.o"
 --strict --scatter "H7_MOTOR\H7_MOTOR.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

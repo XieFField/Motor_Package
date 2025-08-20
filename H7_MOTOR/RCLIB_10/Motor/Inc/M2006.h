@@ -36,7 +36,7 @@ public:
 
     virtual float get_torque() override;
 
-    virtual uint8_t get_temperature() const {return temperature;};
+    virtual uint8_t get_temperature() const override {return temperature;};
 
     float Out = 0.0f; // Êä³öµçÁ÷ mA
 

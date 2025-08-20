@@ -107,6 +107,8 @@ public:
     //校准
     virtual void relocate_distance(float distance) {};      // 重新定位距离
     virtual void relocate_pos(float angle) {};              // 重新定位角度
+    virtual uint16_t set_encoder_offset(uint16_t input_value){return this->encoder;};
+
 
     //电机分类
     MOTOR_FLAG MOTOR_TYPE = NONE_MOTOR;
@@ -196,6 +198,8 @@ private:
     uint32_t send_idLOW(){return 0x200;}
     uint32_t send_idHIGH(){return 0x1FF;}
 
+    uint32_t send_idLOW_GM6020(){return 0x1FE;}
+    uint32_t send_idHigh_GM6020(){return 0x2FE;}
 };
 
 #endif
