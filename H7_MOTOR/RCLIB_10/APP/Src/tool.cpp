@@ -1,6 +1,5 @@
 /**
  * @file tool.cpp
- * @author XieFField
  * @brief 工具箱，提供一些常用的工具函数
  */
 #include "tool.h"

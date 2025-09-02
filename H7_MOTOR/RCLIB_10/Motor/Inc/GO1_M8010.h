@@ -28,7 +28,7 @@ public:
     void CAN_update_EXT(uint32_t can_id, uint8_t RX_Data[8]);
 private:
 
-}
+};
 
 #endif
 

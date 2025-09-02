@@ -38,6 +38,8 @@ public:
 
     virtual uint8_t get_temperature() const override {return temperature;};
 
+    virtual float get_speed() override {return rpm;};
+
     float Out = 0.0f; // Êä³öµçÁ÷ mA
 
 private:

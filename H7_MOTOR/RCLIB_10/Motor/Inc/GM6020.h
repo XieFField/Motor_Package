@@ -4,8 +4,6 @@
 #pragma once
 
 #include "motor_base.h"
-#include "PID.h"
-#include "SpeedPlanner.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -42,6 +40,8 @@ public:
     virtual float get_torque() override;
 
     virtual uint8_t get_temperature() const override { return temperature; }
+
+    float Out = 0.0f;   
 
 private:
 

@@ -71,7 +71,7 @@ protected:
 public:
     Motor_Base(){};
 
-    float Out = 0.0f; //输出
+    
 
 
     //位置
@@ -105,7 +105,7 @@ public:
     virtual float get_speed() = 0;
 
     //校准
-    virtual void relocate_distance(float distance) {};      // 重新定位距离
+    virtual void relocate_distance(float distance_) {};      // 重新定位距离
     virtual void relocate_pos(float angle) {};              // 重新定位角度
     virtual uint16_t set_encoder_offset(uint16_t input_value){return this->encoder;};
 
@@ -152,6 +152,8 @@ public:
     DJI_Motor_Base(uint32_t can_id, FDCAN_HandleTypeDef *hfdcan, 
                    float max_RealCurrent_, int16_t max_virtualCurrent_,
                     DJI_MOTOR_FLAG dji_motor_type_);
+
+    float Out = 0.0f; //输出
 
     //数据帧生成
     virtual int16_t motor_process() = 0;
