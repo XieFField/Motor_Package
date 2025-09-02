@@ -1156,11 +1156,11 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x689E064A)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x689E064A)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x689E064A)
-F (..\RCLIB_10\APP\Src\tool.cpp)(0x68A046BB)(--cpp -c --cpu Cortex-M7.fp.dp -g -W -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ..\RCLIB_10\APP\Inc -I ..\RCLIB_10\BSP\Inc -I ..\RCLIB_10\Module\Inc -I ..\RCLIB_10\Motor\Inc --c99 --cpp11-I.\RTE\_H7_MOTOR-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="542" -DSTM32H723xx -D_RTE_ -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx-o h7_motor\tool.o --omf_browse h7_motor\tool.crf --depend h7_motor\tool.d)
+F (..\RCLIB_10\APP\Src\tool.cpp)(0x68B55B62)(--cpp -c --cpu Cortex-M7.fp.dp -g -W -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ..\RCLIB_10\APP\Inc -I ..\RCLIB_10\BSP\Inc -I ..\RCLIB_10\Module\Inc -I ..\RCLIB_10\Motor\Inc --c99 --cpp11-I.\RTE\_H7_MOTOR-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="542" -DSTM32H723xx -D_RTE_ -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx-o h7_motor\tool.o --omf_browse h7_motor\tool.crf --depend h7_motor\tool.d)
 I (..\RCLIB_10\APP\Inc\tool.h)(0x68A05429)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 F (..\RCLIB_10\BSP\Src\fdCAN_driver.cpp)(0x68A1CD9E)(--cpp -c --cpu Cortex-M7.fp.dp -g -W -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ..\RCLIB_10\APP\Inc -I ..\RCLIB_10\BSP\Inc -I ..\RCLIB_10\Module\Inc -I ..\RCLIB_10\Motor\Inc --c99 --cpp11-I.\RTE\_H7_MOTOR-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="542" -DSTM32H723xx -D_RTE_ -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx-o h7_motor\fdcan_driver.o --omf_browse h7_motor\fdcan_driver.crf --depend h7_motor\fdcan_driver.d)
-I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68A15713)
+I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68B6691F)
 I (C:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588B8344)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\RCLIB_10\APP\Inc\tool.h)(0x68A05429)
@@ -1202,8 +1202,8 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x689E06BF)
 I (../Core/Inc/gpio.h)(0x689E1842)
 F (..\RCLIB_10\Motor\Src\M3508_P.cpp)(0x68A56577)(--cpp -c --cpu Cortex-M7.fp.dp -g -W -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ..\RCLIB_10\APP\Inc -I ..\RCLIB_10\BSP\Inc -I ..\RCLIB_10\Module\Inc -I ..\RCLIB_10\Motor\Inc --c99 --cpp11-I.\RTE\_H7_MOTOR-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="542" -DSTM32H723xx -D_RTE_ -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx-o h7_motor\m3508_p.o --omf_browse h7_motor\m3508_p.crf --depend h7_motor\m3508_p.d)
 I (..\RCLIB_10\Motor\Inc\M3508_P.h)(0x68A565D3)
-I (..\RCLIB_10\Motor\Inc\motor_base.h)(0x68A56D96)
-I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68A15713)
+I (..\RCLIB_10\Motor\Inc\motor_base.h)(0x68B55ADB)
+I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68B6691F)
 I (C:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588B8344)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\RCLIB_10\APP\Inc\tool.h)(0x68A05429)
@@ -1244,8 +1244,8 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x689E06BF)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x689E06BF)
 I (../Core/Inc/gpio.h)(0x689E1842)
 F (..\RCLIB_10\Motor\Src\motor_base.cpp)(0x68A56F1A)(--cpp -c --cpu Cortex-M7.fp.dp -g -W -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ..\RCLIB_10\APP\Inc -I ..\RCLIB_10\BSP\Inc -I ..\RCLIB_10\Module\Inc -I ..\RCLIB_10\Motor\Inc --c99 --cpp11-I.\RTE\_H7_MOTOR-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="542" -DSTM32H723xx -D_RTE_ -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx-o h7_motor\motor_base.o --omf_browse h7_motor\motor_base.crf --depend h7_motor\motor_base.d)
-I (..\RCLIB_10\Motor\Inc\motor_base.h)(0x68A56D96)
-I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68A15713)
+I (..\RCLIB_10\Motor\Inc\motor_base.h)(0x68B55ADB)
+I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68B6691F)
 I (C:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588B8344)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\RCLIB_10\APP\Inc\tool.h)(0x68A05429)
@@ -1286,9 +1286,9 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x689E06BF)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x689E06BF)
 I (../Core/Inc/gpio.h)(0x689E1842)
 F (..\RCLIB_10\Motor\Src\M2006.cpp)(0x68A56580)(--cpp -c --cpu Cortex-M7.fp.dp -g -W -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ..\RCLIB_10\APP\Inc -I ..\RCLIB_10\BSP\Inc -I ..\RCLIB_10\Module\Inc -I ..\RCLIB_10\Motor\Inc --c99 --cpp11-I.\RTE\_H7_MOTOR-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="542" -DSTM32H723xx -D_RTE_ -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx-o h7_motor\m2006.o --omf_browse h7_motor\m2006.crf --depend h7_motor\m2006.d)
-I (..\RCLIB_10\Motor\Inc\M2006.h)(0x68A565DA)
-I (..\RCLIB_10\Motor\Inc\motor_base.h)(0x68A56D96)
-I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68A15713)
+I (..\RCLIB_10\Motor\Inc\M2006.h)(0x68B5215B)
+I (..\RCLIB_10\Motor\Inc\motor_base.h)(0x68B55ADB)
+I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68B6691F)
 I (C:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588B8344)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\RCLIB_10\APP\Inc\tool.h)(0x68A05429)
@@ -1328,10 +1328,10 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h)(0x689E06BF)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x689E06BF)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x689E06BF)
 I (../Core/Inc/gpio.h)(0x689E1842)
-F (..\RCLIB_10\Motor\Src\GM6020.cpp)(0x68A56F92)(--cpp -c --cpu Cortex-M7.fp.dp -g -W -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ..\RCLIB_10\APP\Inc -I ..\RCLIB_10\BSP\Inc -I ..\RCLIB_10\Module\Inc -I ..\RCLIB_10\Motor\Inc --c99 --cpp11-I.\RTE\_H7_MOTOR-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="542" -DSTM32H723xx -D_RTE_ -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx-o h7_motor\gm6020.o --omf_browse h7_motor\gm6020.crf --depend h7_motor\gm6020.d)
-I (..\RCLIB_10\Motor\Inc\GM6020.h)(0x68A570C3)
-I (..\RCLIB_10\Motor\Inc\motor_base.h)(0x68A56D96)
-I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68A15713)
+F (..\RCLIB_10\Motor\Src\GM6020.cpp)(0x68B56C3D)(--cpp -c --cpu Cortex-M7.fp.dp -g -W -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ..\RCLIB_10\APP\Inc -I ..\RCLIB_10\BSP\Inc -I ..\RCLIB_10\Module\Inc -I ..\RCLIB_10\Motor\Inc --c99 --cpp11-I.\RTE\_H7_MOTOR-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="542" -DSTM32H723xx -D_RTE_ -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx-o h7_motor\gm6020.o --omf_browse h7_motor\gm6020.crf --depend h7_motor\gm6020.d)
+I (..\RCLIB_10\Motor\Inc\GM6020.h)(0x68B55B33)
+I (..\RCLIB_10\Motor\Inc\motor_base.h)(0x68B55ADB)
+I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68B6691F)
 I (C:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588B8344)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\RCLIB_10\APP\Inc\tool.h)(0x68A05429)
@@ -1371,5 +1371,46 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h)(0x689E06BF)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x689E06BF)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x689E06BF)
 I (../Core/Inc/gpio.h)(0x689E1842)
-I (..\RCLIB_10\APP\Inc\PID.h)(0x68A15D7A)
-I (..\RCLIB_10\APP\Inc\SpeedPlanner.h)(0x68A15D57)
+F (..\RCLIB_10\Motor\Src\VESC.cpp)(0x68B6820D)(--cpp -c --cpu Cortex-M7.fp.dp -g -W -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ..\RCLIB_10\APP\Inc -I ..\RCLIB_10\BSP\Inc -I ..\RCLIB_10\Module\Inc -I ..\RCLIB_10\Motor\Inc --c99 --cpp11-I.\RTE\_H7_MOTOR-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="542" -DSTM32H723xx -D_RTE_ -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx-o h7_motor\vesc.o --omf_browse h7_motor\vesc.crf --depend h7_motor\vesc.d)
+I (..\RCLIB_10\Motor\Inc\VESC.h)(0x68B672D7)
+I (..\RCLIB_10\Motor\Inc\motor_base.h)(0x68B55ADB)
+I (..\RCLIB_10\BSP\Inc\fdCAN_driver.h)(0x68B6691F)
+I (C:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588B8344)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\RCLIB_10\APP\Inc\tool.h)(0x68A05429)
+I (../Core/Inc/fdcan.h)(0x689E1898)
+I (../Core/Inc/main.h)(0x689E1847)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x689E06BF)
+I (../Core/Inc/stm32h7xx_hal_conf.h)(0x689E1846)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x689E06BE)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h)(0x689E06BF)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x689E06BF)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h723xx.h)(0x689E06BF)
+I (../Drivers/CMSIS/Include/core_cm7.h)(0x689E0651)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x689E0651)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x689E0651)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x689E0651)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x689E0651)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x689E06BE)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x588B8344)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h)(0x689E06BE)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h)(0x689E06BE)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_fdcan.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h)(0x689E06BE)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h)(0x689E06BE)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h)(0x689E06BE)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x689E06BF)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x689E06BF)
+I (../Core/Inc/gpio.h)(0x689E1842)

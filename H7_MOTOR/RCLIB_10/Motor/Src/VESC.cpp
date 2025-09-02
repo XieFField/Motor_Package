@@ -48,11 +48,6 @@ void VESC::send_Data()
     }
 }
 
-void VESC::CAN_Update_VESC(uint8_t Rx_Data[8])
-{
-
-}
-
 void VESC::set_eRPM()
 {
     uint8_t tx_buff[8] = {0};
